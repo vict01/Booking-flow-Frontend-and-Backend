@@ -1,0 +1,27 @@
+{
+    "appData": {
+        "urlUI": "https://booking.test.env.taxdoo.com/",
+        "urlVATid": "/api/vat-id/validation?vatNo=DE123456789&country=DE",
+        "urlRecaptcha": "https://www.google.com/recaptcha/api2/reload?k=6Lf-PKscAAAAALR_Zc6VU1C2CTkOXgI0AloE1_Fi",
+        "urlApi": "https://gorest.co.in/public/"
+    },
+    "companyData": {
+        "companyName": "Victor Test",
+        "averageRevenue": "1000",
+        "address": "Valentinskamp 70, 20355 Hamburg",
+        "vatId": "DE123456789",
+        "eMail": "testEmail@test.test",
+        "telephone": "+49123456789"
+    },
+    "personalData": {
+        "salutationMr": "Mr",
+        "salutationMrs": "Mrs",
+        "firstName": "Victor",
+        "lasttName": "Caminero",
+        "userTest": "userTest",
+        "genderMale": "male",
+        "genderFemale": "female",
+        "statusActive": "active",
+        "statusInactive": "inactive"
+    }
+}
