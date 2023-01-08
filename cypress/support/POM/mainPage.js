@@ -12,10 +12,10 @@ export function companyNameInput() {
 }
 
 export function getPersonalData() {
-    const salutation = cy.get('[name=salutation]') 
+    const salutation = cy.get('[name=salutation]')
     const firstName = cy.get('[name=name]')
     const lasttName = cy.get('[name=surname]')
-    return {salutation, firstName, lasttName}
+    return { salutation, firstName, lasttName }
 }
 
 export function addressInput() {
@@ -27,9 +27,9 @@ export function VATidInput() {
 }
 
 export function getContactInfo() {
-    const eMail = cy.get('[name=email]') 
+    const eMail = cy.get('[name=email]')
     const telephone = cy.get('[name=tel]')
-    return {eMail, telephone}
+    return { eMail, telephone }
 }
 
 export function completeBookingButton() {
