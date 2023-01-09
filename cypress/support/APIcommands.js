@@ -1,12 +1,12 @@
-import { appData } from "../fixtures/fixtures.json"
+import { appData, HTTP_Method as method } from "../fixtures/fixtures.json"
 const urlApi = appData.urlApi
 
 Cypress.Commands.add('createUser', (name, email, gender, status) => {
     cy
         .request({
-            url: `${urlApi}v2/users`,
+            url: `${urlApi}`,
             qs: {},
-            method: 'POST',
+            method: method.POST,
             body:
             {
                 "name": name,
@@ -16,8 +16,9 @@ Cypress.Commands.add('createUser', (name, email, gender, status) => {
             }
             ,
             headers: {
-                authorization: "Bearer 74493171aac0458cb0ade8ed08298594ed89634325ba5a2eb6eb5ae282d6dac5",
-                'content-type': "application/json"
+                authorization: appData.apiToken,
+                contentType: appData.contentTypeAppJSON
+                
             },
             failOnStatusCode: false
         })
@@ -25,10 +26,10 @@ Cypress.Commands.add('createUser', (name, email, gender, status) => {
 
 Cypress.Commands.add('getUserById', (userId) => {
     cy.request({
-        url: `https://gorest.co.in/public/v2/users/${userId}`,
+        url: `${urlApi}/${userId}`,
         headers: {
-            authorization: "Bearer 74493171aac0458cb0ade8ed08298594ed89634325ba5a2eb6eb5ae282d6dac5",
-            'content-type': "application/json"
+            authorization: appData.apiToken,
+            contentType: appData.contentTypeAppJSON
         },
         failOnStatusCode: false
     })
@@ -37,9 +38,9 @@ Cypress.Commands.add('getUserById', (userId) => {
 Cypress.Commands.add('updateUser', (id, name, email, status) => {
     cy
         .request({
-            url: `${urlApi}v2/users/${id}`,
+            url: `${urlApi}/${id}`,
             qs: {},
-            method: 'PUT',
+            method: method.PUT,
             body:
             {
                 "name": name,
@@ -48,8 +49,8 @@ Cypress.Commands.add('updateUser', (id, name, email, status) => {
             }
             ,
             headers: {
-                authorization: "Bearer 74493171aac0458cb0ade8ed08298594ed89634325ba5a2eb6eb5ae282d6dac5",
-                'content-type': "application/json"
+                authorization: appData.apiToken,
+                contentType: appData.contentTypeAppJSON
             },
             failOnStatusCode: false
         })
@@ -58,13 +59,13 @@ Cypress.Commands.add('updateUser', (id, name, email, status) => {
 Cypress.Commands.add('deleteUser', (id) => {
     cy
         .request({
-            url: `${urlApi}v2/users/${id}`,
+            url: `${urlApi}/${id}`,
             qs: {},
-            method: 'DELETE',
+            method: method.DELETE,
             body: {},
             headers: {
-                authorization: "Bearer 74493171aac0458cb0ade8ed08298594ed89634325ba5a2eb6eb5ae282d6dac5",
-                'content-type': "application/json"
+                authorization: appData.apiToken,
+                contentType: appData.contentTypeAppJSON
             },
             failOnStatusCode: false
         })

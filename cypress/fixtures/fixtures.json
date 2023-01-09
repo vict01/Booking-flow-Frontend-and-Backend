@@ -3,7 +3,16 @@
         "urlUI": "https://booking.test.env.taxdoo.com/",
         "urlVATid": "/api/vat-id/validation?vatNo=DE123456789&country=DE",
         "urlRecaptcha": "https://www.google.com/recaptcha/api2/reload?k=6Lf-PKscAAAAALR_Zc6VU1C2CTkOXgI0AloE1_Fi",
-        "urlApi": "https://gorest.co.in/public/"
+        "urlApi": "https://gorest.co.in/public/v2/users",
+        "contentTypeAppJSON": "application/json",
+        "apiToken": "Bearer 74493171aac0458cb0ade8ed08298594ed89634325ba5a2eb6eb5ae282d6dac5"
+    },
+    "HTTP_Method":{
+        "GET": "GET",
+        "POST": "POST",
+        "PUT": "PUT",
+        "PATCH": "PATCH",
+        "DELETE": "DELETE"
     },
     "companyData": {
         "companyName": "Victor Test",
