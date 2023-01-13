@@ -4,7 +4,7 @@ import { appData, companyData, personalData } from "../fixtures/fixtures.json"
 describe('Business Critical UI Scenario', () => {
     const expectedUrl = appData.urlUI
     var companyName = companyData.companyName
-    var averageRevenue = companyData.averageRevenue100
+    var averageRevenue = companyData.averageRevenue1000
     var address = companyData.address
     var VATid = companyData.vatId
     var eMail = companyData.eMail

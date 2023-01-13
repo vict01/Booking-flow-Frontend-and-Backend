@@ -16,7 +16,7 @@
     },
     "companyData": {
         "companyName": "Victor Test",
-        "averageRevenue100": "1000",
+        "averageRevenue1000": "1000",
         "address": "Valentinskamp 70, 20355 Hamburg",
         "vatId": "DE123456789",
         "eMail": "testEmail@test.test",
