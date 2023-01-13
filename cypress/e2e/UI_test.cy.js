@@ -4,7 +4,7 @@ import { appData, companyData, personalData } from "../fixtures/fixtures.json"
 describe('Business Critical UI Scenario', () => {
     const expectedUrl = appData.urlUI
     var companyName = companyData.companyName
-    var averageRevenue = companyData.averageRevenue
+    var averageRevenue = companyData.averageRevenue100
     var address = companyData.address
     var VATid = companyData.vatId
     var eMail = companyData.eMail
@@ -23,7 +23,7 @@ describe('Business Critical UI Scenario', () => {
         cy.selectAverageRevenue(averageRevenue)
         cy.chooseStarterPackage()
         cy.chooseOSSExportAddOn()
-        cy.clickOnNextButtonPage1()
+        cy.clickOnNextButtonPage()
         cy.assertUserWasTakenToPage2()
 
         cy.typeCompanyName(companyName)
@@ -33,7 +33,7 @@ describe('Business Critical UI Scenario', () => {
         cy.intercepApiRequest(appData.urlVATid, vatIdRequest)
         cy.completeContactInfo(eMail, telephone)
         cy.assertApiRequest(vatIdRequest, 200)
-        cy.clickOnNextButtonPage2()
+        cy.clickOnNextButtonPage()
         cy.assertUserWasTakenToPage3()
 
         cy.acceptTermsAndConditions()

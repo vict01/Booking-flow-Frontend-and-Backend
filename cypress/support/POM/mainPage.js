@@ -33,5 +33,5 @@ export function getContactInfo() {
 }
 
 export function completeBookingButton() {
-    return cy.get('._primary_g86ey_12')
+    return cy.get('[type=submit]')
 }

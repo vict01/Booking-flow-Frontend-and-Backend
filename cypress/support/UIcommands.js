@@ -44,7 +44,7 @@ Cypress.Commands.add('chooseOSSExportAddOn', () => {
     cy.contains('label', 'OSS Export').eq(0).click()
 })
 
-Cypress.Commands.add('clickOnNextButtonPage1', () => {
+Cypress.Commands.add('clickOnNextButtonPage', () => {
     cy.contains('span', 'Next').click()
 })
 
@@ -74,10 +74,6 @@ Cypress.Commands.add('typeVATid', (VAT) => {
 Cypress.Commands.add('completeContactInfo', (eMail, telephone) => {
     getContactInfo().eMail.type(eMail)
     getContactInfo().telephone.type(telephone)
-})
-
-Cypress.Commands.add('clickOnNextButtonPage2', () => {
-    cy.get('.\_action_g86ey_69 > .notranslate').click()
 })
 
 Cypress.Commands.add('assertUserWasTakenToPage3', () => {
